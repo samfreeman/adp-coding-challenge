@@ -9,4 +9,4 @@ To run this code
 3. Build the project with `yarn build`
 4. Run the project with `yarn start`
 
-You will need a github account, the yarn tool, and a Yelp Fusion API Key.
+You will need a [github account](https://github.com/), the [yarn tool](https://yarnpkg.com/), and a [Yelp Fusion API Key](https://www.yelp.com/developers/documentation/v3/authentication) to run this application.
