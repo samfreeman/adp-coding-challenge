@@ -4,7 +4,6 @@ import { observable, action, computed } from 'mobx'
 import { DTO, CompanyAPI } from '../api/CompanyApi'
 import { Company } from '../models/Company'
 import { DebugLog } from '../utils/DebugLog';
-import { Review } from '../models/Review';
 
 
 const log = new DebugLog('** CompanyService:', true)
@@ -85,12 +84,15 @@ class CompanyService {
 		this._companies.forEach(async c => {
 			let data: DTO.Review | undefined
 			try{
+				log.write(`Wating for review for company '${c.name}...`)
 				data = await this.api?.getReview(c.id) || undefined
 				c.setReview(data)
 			}
-			catch{
+			catch (x){
+				log.write('!!', x)
 				c.setReview(undefined)
 			}
+			log.write(`Review was set for company '${c.name}'`)
 		})
 	}
 

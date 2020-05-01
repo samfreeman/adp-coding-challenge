@@ -11,7 +11,8 @@ const companyName = style({
 	$debugName: 'companyName',
 	marginTop: '.4em',
 	backgroundColor: '#333333',
-	fontSize: '1.2em'
+	fontSize: '1.2em',
+	paddingLeft: '.4em'
 })
 
 const companyRating = style({

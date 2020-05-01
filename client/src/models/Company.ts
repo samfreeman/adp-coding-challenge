@@ -28,7 +28,7 @@ export class Company extends Element<DTO.Company> {
 	@action setReview = (review: DTO.Review | undefined): void => {
 		this._review = review
 			? new Review(review)
-			: new Review({id: '', text: '', reviewer: ''})
-		this._reviewLoading = true
+			: new Review({ id: '', text: '', reviewer: '' })
+		this._reviewLoading = false
 	}
 }

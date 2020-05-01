@@ -5,7 +5,10 @@ import * as DTO from './DTO'
 import { DebugLog } from '../utils/DebugLog'
 
 
-const rootUrl = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses'
+//const rootUrl = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses'
+//const rootUrl = 'https://api.yelp.com/v3/businesses'
+const rootUrl = 'http://localhost:8080/businesses'
+
 
 type JsonData = { [key: string]: any }
 type SearchResult = { businesses: JsonData[] }

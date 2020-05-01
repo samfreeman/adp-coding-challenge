@@ -11,7 +11,7 @@ const reviewClass = style({
 	$debugName: 'review',
 	backgroundColor: '#666666',
 	marginLeft: '.4em',
-	padding: '.2em'
+	padding: '.4em'
 })
 
 const reviewText = style({
@@ -40,10 +40,10 @@ export class Review extends Component<{
 				{loading &&
 					<Loading text='Loading review...' />
 				}
-				{review && !review.review &&
+				{!loading && review && !review.review &&
 					<div className={reviewText}>No reviews</div>
 				}
-				{review && review.review &&
+				{!loading && review && review.review &&
 					<>
 					<div className={reviewText}>{review.review}</div>
 					<div className={reviewer}>{review.reviewer}</div>
