@@ -22,7 +22,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jsdom": "^15.2.1",
     "typescript": "^3.8.3"
   },
